@@ -10,7 +10,7 @@ genre_schema = GenreSchema()
 genres_schema = GenreSchema(many=True)
 
 
-@genre_ns.route('/<id>')
+@genre_ns.route('/<gid>')
 class GenreView(Resource):
     def get(self, gid):
         req = genre_service.get_one(gid)
